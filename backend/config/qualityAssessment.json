@@ -1,0 +1,107 @@
+{
+  "qualityAssessmentCriteria": [
+    {
+      "id": "document_accessibility",
+      "name": "Document Accessibility",
+      "description": "Evaluates if the CV format is easily accessible and viewable across different platforms",
+      "maxScore": 5
+    },
+    {
+      "id": "system_compatibility",
+      "name": "System Compatibility", 
+      "description": "Assesses how well the document structure works with automated parsing systems",
+      "maxScore": 5
+    },
+    {
+      "id": "keyword_optimization",
+      "name": "Keyword Optimization",
+      "description": "Measures the presence and relevance of industry-specific terms and job-related keywords",
+      "maxScore": 5
+    },
+    {
+      "id": "section_organization",
+      "name": "Section Organization",
+      "description": "Reviews the logical flow and standard categorization of CV sections",
+      "maxScore": 5
+    },
+    {
+      "id": "terminology_clarity",
+      "name": "Terminology Clarity",
+      "description": "Evaluates the use of clear, professional language without excessive jargon",
+      "maxScore": 5
+    },
+    {
+      "id": "visual_presentation",
+      "name": "Visual Presentation",
+      "description": "Assesses font choices, spacing, and overall visual readability",
+      "maxScore": 5
+    },
+    {
+      "id": "formatting_consistency",
+      "name": "Formatting Consistency",
+      "description": "Checks for uniform use of bullets, spacing, and structural elements",
+      "maxScore": 5
+    },
+    {
+      "id": "contact_completeness",
+      "name": "Contact Completeness",
+      "description": "Verifies the presence and accuracy of essential contact information",
+      "maxScore": 5
+    },
+    {
+      "id": "role_alignment",
+      "name": "Role Alignment",
+      "description": "Measures how well the CV content matches the target position requirements",
+      "maxScore": 5
+    },
+    {
+      "id": "content_efficiency",
+      "name": "Content Efficiency",
+      "description": "Evaluates the balance between comprehensive information and concise presentation",
+      "maxScore": 5
+    },
+    {
+      "id": "layout_structure",
+      "name": "Layout Structure",
+      "description": "Assesses the overall document design and information hierarchy",
+      "maxScore": 5
+    },
+    {
+      "id": "experience_presentation",
+      "name": "Experience Presentation",
+      "description": "Reviews how work history is organized and presented chronologically",
+      "maxScore": 5
+    },
+    {
+      "id": "education_details",
+      "name": "Education Details",
+      "description": "Evaluates the completeness and relevance of educational background information",
+      "maxScore": 5
+    },
+    {
+      "id": "skills_documentation",
+      "name": "Skills Documentation",
+      "description": "Assesses how technical and soft skills are listed and categorized",
+      "maxScore": 5
+    },
+    {
+      "id": "achievement_language",
+      "name": "Achievement Language",
+      "description": "Reviews the use of impactful action words and professional terminology",
+      "maxScore": 5
+    },
+    {
+      "id": "impact_quantification",
+      "name": "Impact Quantification",
+      "description": "Measures the inclusion of specific metrics and measurable accomplishments",
+      "maxScore": 5
+    }
+  ],
+  "totalMaxScore": 80,
+  "scoringRanges": {
+    "excellent": { "min": 70, "max": 80, "label": "Excellent" },
+    "good": { "min": 60, "max": 69, "label": "Good" },
+    "average": { "min": 45, "max": 59, "label": "Average" },
+    "needs_improvement": { "min": 0, "max": 44, "label": "Needs Improvement" }
+  }
+}

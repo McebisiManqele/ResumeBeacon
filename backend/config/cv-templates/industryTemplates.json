@@ -1,0 +1,70 @@
+{
+  "industries": [
+    {
+      "id": "general",
+      "name": "General",
+      "description": "Universal template suitable for any industry",
+      "sections": ["basicInfo", "experience", "education", "skills", "projects", "certifications"],
+      "keywords": ["professional", "reliable", "experienced", "skilled"],
+      "formatting": {
+        "emphasis": "balanced",
+        "sectionOrder": ["basicInfo", "experience", "education", "skills"]
+      }
+    },
+    {
+      "id": "tech",
+      "name": "Tech Industry",
+      "description": "Optimized for software development, IT, and technology roles",
+      "sections": ["basicInfo", "experience", "projects", "skills", "education", "certifications"],
+      "keywords": ["innovative", "technical", "problem-solving", "agile", "scalable"],
+      "formatting": {
+        "emphasis": "technical_skills",
+        "sectionOrder": ["basicInfo", "experience", "projects", "skills", "education"]
+      }
+    },
+    {
+      "id": "finance",
+      "name": "Finance & Accounting",
+      "description": "Tailored for financial services, accounting, and banking positions",
+      "sections": ["basicInfo", "experience", "education", "certifications", "skills"],
+      "keywords": ["analytical", "detail-oriented", "compliance", "financial", "strategic"],
+      "formatting": {
+        "emphasis": "certifications",
+        "sectionOrder": ["basicInfo", "experience", "education", "certifications", "skills"]
+      }
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "description": "Designed for medical professionals, nurses, and healthcare workers",
+      "sections": ["basicInfo", "experience", "clinicalExposure", "education", "certifications", "volunteering"],
+      "keywords": ["compassionate", "patient-focused", "clinical", "healthcare", "medical"],
+      "formatting": {
+        "emphasis": "clinical_experience",
+        "sectionOrder": ["basicInfo", "experience", "clinicalExposure", "education", "certifications"]
+      }
+    },
+    {
+      "id": "arts",
+      "name": "Arts & Design",
+      "description": "Perfect for creative professionals, designers, and artists",
+      "sections": ["basicInfo", "experience", "projects", "education", "skills"],
+      "keywords": ["creative", "innovative", "artistic", "visual", "design-thinking"],
+      "formatting": {
+        "emphasis": "portfolio",
+        "sectionOrder": ["basicInfo", "projects", "experience", "skills", "education"]
+      }
+    },
+    {
+      "id": "business",
+      "name": "Business & Management",
+      "description": "Ideal for management, consulting, and business development roles",
+      "sections": ["basicInfo", "experience", "education", "skills", "projects", "volunteering"],
+      "keywords": ["leadership", "strategic", "management", "business-development", "results-driven"],
+      "formatting": {
+        "emphasis": "leadership_experience",
+        "sectionOrder": ["basicInfo", "experience", "education", "skills"]
+      }
+    }
+  ]
+}
