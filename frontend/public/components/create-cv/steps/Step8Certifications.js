@@ -25,6 +25,7 @@ export function renderStep8(cvData) {
     
     document.getElementById('skip-certifications').addEventListener('click', () => {
         updateCVData('certifications', []);
+        document.getElementById('next-btn').click();
     });
 }
 

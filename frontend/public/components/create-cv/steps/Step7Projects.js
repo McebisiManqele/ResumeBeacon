@@ -25,6 +25,7 @@ export function renderStep7(cvData) {
     
     document.getElementById('skip-projects').addEventListener('click', () => {
         updateCVData('projects', []);
+        document.getElementById('next-btn').click();
     });
 }
 

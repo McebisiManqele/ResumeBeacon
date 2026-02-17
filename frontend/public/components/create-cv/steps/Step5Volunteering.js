@@ -1,41 +1,42 @@
 import { updateCVData } from '../wizard/CVWizard.js';
 
-export function renderStep4(cvData) {
+export function renderStep5(cvData) {
     const content = document.getElementById('wizard-content');
-    const clinical = cvData.clinicalExposure || [];
+    const volunteering = cvData.volunteering || [];
     
     content.innerHTML = `
         <div class="step-container">
-            <h2>Clinical Exposure</h2>
-            <p>Add your clinical experience (Healthcare professionals)</p>
+            <h2>Volunteering</h2>
+            <p>Add your volunteer work and community service</p>
             
-            <div id="clinical-list"></div>
-            <button type="button" class="btn btn-secondary" id="add-clinical">+ Add Clinical Experience</button>
-            <button type="button" class="btn btn-secondary" id="skip-clinical">Skip This Step</button>
+            <div id="volunteer-list"></div>
+            <button type="button" class="btn btn-secondary" id="add-volunteer">+ Add Volunteering</button>
+            <button type="button" class="btn btn-secondary" id="skip-volunteer">Skip This Step</button>
         </div>
     `;
     
-    renderClinicalList(clinical);
+    renderVolunteerList(volunteering);
     
-    document.getElementById('add-clinical').addEventListener('click', () => {
-        clinical.push({ facility: '', role: '', startDate: '', endDate: '', description: '' });
-        renderClinicalList(clinical);
-        updateCVData('clinicalExposure', clinical);
+    document.getElementById('add-volunteer').addEventListener('click', () => {
+        volunteering.push({ organization: '', role: '', startDate: '', endDate: '', description: '' });
+        renderVolunteerList(volunteering);
+        updateCVData('volunteering', volunteering);
     });
     
-    document.getElementById('skip-clinical').addEventListener('click', () => {
-        updateCVData('clinicalExposure', []);
+    document.getElementById('skip-volunteer').addEventListener('click', () => {
+        updateCVData('volunteering', []);
+        document.getElementById('next-btn').click();
     });
 }
 
-function renderClinicalList(clinical) {
-    const list = document.getElementById('clinical-list');
-    list.innerHTML = clinical.map((item, index) => `
+function renderVolunteerList(volunteering) {
+    const list = document.getElementById('volunteer-list');
+    list.innerHTML = volunteering.map((item, index) => `
         <div class="experience-item">
             <div class="form-grid">
                 <div class="form-group">
-                    <label>Facility/Hospital</label>
-                    <input type="text" class="form-control" data-index="${index}" data-field="facility" value="${item.facility || ''}">
+                    <label>Organization</label>
+                    <input type="text" class="form-control" data-index="${index}" data-field="organization" value="${item.organization || ''}">
                 </div>
                 <div class="form-group">
                     <label>Role</label>
@@ -62,17 +63,17 @@ function renderClinicalList(clinical) {
         input.addEventListener('input', (e) => {
             const index = parseInt(e.target.dataset.index);
             const field = e.target.dataset.field;
-            clinical[index][field] = e.target.value;
-            updateCVData('clinicalExposure', clinical);
+            volunteering[index][field] = e.target.value;
+            updateCVData('volunteering', volunteering);
         });
     });
     
     list.querySelectorAll('.btn-remove').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const index = parseInt(e.target.dataset.index);
-            clinical.splice(index, 1);
-            renderClinicalList(clinical);
-            updateCVData('clinicalExposure', clinical);
+            volunteering.splice(index, 1);
+            renderVolunteerList(volunteering);
+            updateCVData('volunteering', volunteering);
         });
     });
 }

@@ -25,6 +25,7 @@ export function renderStep4(cvData) {
     
     document.getElementById('skip-clinical').addEventListener('click', () => {
         updateCVData('clinicalExposure', []);
+        document.getElementById('next-btn').click();
     });
 }
 
